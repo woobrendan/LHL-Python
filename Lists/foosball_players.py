@@ -1,3 +1,4 @@
+import math
 foosballers = [
     "Mia",
     "Retta",
@@ -19,3 +20,9 @@ foosballers = [
     "Ian",
     "Pat"
 ]
+
+# Get median player
+mid = math.ceil(len(foosballers) / 2)
+
+# Get the 5 middle players
+mid_five = foosballers[(mid-3):(mid+2)]
