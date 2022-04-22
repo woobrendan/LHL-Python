@@ -24,15 +24,26 @@ replacements = [
     ["A holiday", "HOLIDAY"]
 ]
 
-newProseString = proseString
+# newProseString = proseString
 # userInput = input("Please provide a holiday")
 # newProseString = newProseString.replace("HOLIDAY", userInput)
 
-for index in range(0, len(replacements)):
-    prompt = "Please provide "
-    placeholder = replacements[index][1]
-    print("placeholder ", placeholder)
-    userInput = input(prompt + replacements[index][0] + ": ")
-    newProseString = newProseString.replace(placeholder, userInput)
 
-print(newProseString)
+def prompt_replace(array):
+    newProseString = proseString
+    for index in range(0, len(array)):
+        prompt = "Please provide "
+        placeholder = array[index][1]
+        userInput = input(prompt + array[index][0] + ": ")
+        newProseString = newProseString.replace(placeholder, userInput)
+    print(newProseString)
+
+
+# for index in range(0, len(replacements)):
+#     prompt = "Please provide "
+#     placeholder = replacements[index][1]
+#     print("placeholder ", placeholder)
+#     userInput = input(prompt + replacements[index][0] + ": ")
+#     newProseString = newProseString.replace(placeholder, userInput)
+
+prompt_replace(replacements)
