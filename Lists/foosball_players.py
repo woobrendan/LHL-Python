@@ -1,3 +1,5 @@
+from ast import FloorDiv
+from curses import erasechar
 import math
 from xxlimited import foo
 foosballers = [
@@ -57,8 +59,15 @@ foosballers.insert(new_mid, "Average Player".upper())
 # insert Lacy +1 of Hubert
 hubert = foosballers.index("Hubert")
 foosballers.insert(hubert + 1, "Lacy")
+
 # omar -1 of rebecca
+rebecca = foosballers.index("Rebecca")
+foosballers.insert(rebecca, "Omar")
+
 # otto 8th best
+foosballers.insert(7, "Otto")
+
 # chauncy 10 spots from bottom
+foosballers.insert(-9, "Chauncy")
 
 print(foosballers)
